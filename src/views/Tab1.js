@@ -11,6 +11,7 @@ export default function Tab1() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+        Tab 1
       </Container>
       <NavTabs />
     </ThemeProvider>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Login, Tab1, Tab2, Tab3 } from "./views/";
+import { NavTabs } from './components/'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -12,8 +13,10 @@ function App() {
         <Route path="/tab3" element={<Tab3 />} />
         {/* <Route path="/*" element={<NotFoundPage/>} /> */}
       </Routes>
+      <NavTabs />
     </Router>
   );
 }
 
 export default App;
+

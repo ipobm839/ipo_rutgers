@@ -11,6 +11,7 @@ export default function Tab3() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+        Tab3
       </Container>
       <NavTabs />
     </ThemeProvider>
