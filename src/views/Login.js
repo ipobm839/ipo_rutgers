@@ -17,11 +17,12 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
       {new Date().getFullYear()}
-      {'.'}
+      {'.'} 
+      <Link color="inherit" href="https://ipo.rutgers.edu/">
+       Rutgers, The State University of New Jersey. All rights reserved.
+      </Link>{' '}
+ 
     </Typography>
   );
 }

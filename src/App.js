@@ -1,6 +1,5 @@
 import React from "react";
-import { Login, Tab1, Tab2, Tab3 } from "./views/";
-import { NavTabs } from './components/'
+import { Login, Tab1, Tab2, Tab3, NotFoundPage } from "./views/";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -11,9 +10,8 @@ function App() {
         <Route path="/tab1" element={<Tab1 />} />
         <Route path="/tab2" element={<Tab2 />} />
         <Route path="/tab3" element={<Tab3 />} />
-        {/* <Route path="/*" element={<NotFoundPage/>} /> */}
+        <Route path="/*" element={<NotFoundPage/>} />
       </Routes>
-      <NavTabs />
     </Router>
   );
 }
