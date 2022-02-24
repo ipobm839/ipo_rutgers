@@ -83,12 +83,12 @@ export default function Tab1() {
   const [open, setOpen] = useState(false);
   const [app, setApp] = useState(null);
 
-  // const filterNames = ({ common_name }) => {
-  //   return (
-  //     common_name &&
-  //     common_name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1
-  //   );
-  // };
+  const filterNames = ({ title }) => {
+    return (
+      title &&
+      title.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1
+    );
+  };
 
   const handleClickOpen = (event, item) => {
     setOpen(true);
@@ -108,12 +108,11 @@ export default function Tab1() {
           <Grid container spacing={2} alignItems="stretch">
             {myPathRutgersData &&
               myPathRutgersData
-                // .filter(filterNames)
+                .filter(filterNames)
                 .slice((page - 1) * itemsPerPage, page * itemsPerPage)
                 .map((i, index) => {
                   return (
                     <Grid item xs={12} sm={4} key={index} className={classes.appCard}>
-                  
                       <Card className={classes.cardImage}>
                         <CardActionArea>
                           <Typography
@@ -131,7 +130,7 @@ export default function Tab1() {
                               </ListItem>
                             </List>
                             <CardActions>
-                              <>
+                              <div>
                                 <Button
                                   size="small"
                                   onClick={(event) => handleClickOpen(event, i)}
@@ -139,7 +138,7 @@ export default function Tab1() {
                                 >
                                   Learn More
                                 </Button>
-                              </>
+                              </div>
                             </CardActions>
                           </CardContent>
                         </CardActionArea>
