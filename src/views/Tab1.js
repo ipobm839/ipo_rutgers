@@ -6,10 +6,8 @@ import {
   Typography,
   makeStyles,
   Button,
-  CardActions,
   Card,
   CardContent,
-  CardActionArea,
   List,
   Dialog,
   DialogContent,
@@ -70,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
     height: "80vh",
     width: "80vw",
   },
+  closeBtn: {
+    float: "right",
+  },
   pagination: {
     margin: "10px",
   },
@@ -85,8 +86,7 @@ export default function Tab1() {
 
   const filterNames = ({ title }) => {
     return (
-      title &&
-      title.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1
+      title && title.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1
     );
   };
 
@@ -105,16 +105,21 @@ export default function Tab1() {
         <SearchBar onSearch={setSearchValue} value={searchValue} />
         <>
           <Grid>
-          <Grid container spacing={2} alignItems="stretch">
-            {myPathRutgersData &&
-              myPathRutgersData
-                .filter(filterNames)
-                .slice((page - 1) * itemsPerPage, page * itemsPerPage)
-                .map((i, index) => {
-                  return (
-                    <Grid item xs={12} sm={4} key={index} className={classes.appCard}>
-                      <Card className={classes.cardImage}>
-                        <CardActionArea>
+            <Grid container spacing={2} alignItems="stretch">
+              {myPathRutgersData &&
+                myPathRutgersData
+                  .filter(filterNames)
+                  .slice((page - 1) * itemsPerPage, page * itemsPerPage)
+                  .map((i, index) => {
+                    return (
+                      <Grid
+                        item
+                        xs={12}
+                        sm={4}
+                        key={index}
+                        className={classes.appCard}
+                      >
+                        <Card className={classes.cardImage}>
                           <Typography
                             gutterBottom
                             variant="h5"
@@ -129,24 +134,19 @@ export default function Tab1() {
                                 <ListItemText primary={i.desc} />
                               </ListItem>
                             </List>
-                            <CardActions>
-                              <div>
-                                <Button
-                                  size="small"
-                                  onClick={(event) => handleClickOpen(event, i)}
-                                  className={classes.learnMoreBtn}
-                                >
-                                  Learn More
-                                </Button>
-                              </div>
-                            </CardActions>
                           </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    </Grid>
-                  );
-                })}
-                </Grid>
+                          <Button
+                            size="small"
+                            onClick={(event) => handleClickOpen(event, i)}
+                            className={classes.learnMoreBtn}
+                          >
+                            Learn More
+                          </Button>
+                        </Card>
+                      </Grid>
+                    );
+                  })}
+            </Grid>
           </Grid>
           <div>
             <Pagination
@@ -171,9 +171,6 @@ export default function Tab1() {
           open={open}
         >
           <div>
-            <Typography className={classes.dialogTitle} variant="h6">
-              {app.title}
-            </Typography>
             {handleClose ? (
               <IconButton
                 className={classes.closeBtn}
@@ -183,6 +180,10 @@ export default function Tab1() {
                 <Close />
               </IconButton>
             ) : null}
+
+            <Typography className={classes.dialogTitle} variant="h6">
+              {app.title}
+            </Typography>
           </div>
           <DialogContent dividers>
             <iframe
