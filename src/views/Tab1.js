@@ -35,12 +35,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
   },
   cardImage: {
-    // width: "300px",
+    height: "300px",
     textAlign: "center",
     boxShadow: "0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05)",
     transition:
       ".3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12)",
-    margin: "10px",
+    margin: "20px",
     "&:hover": {
       transform: "scale(1.03)",
       boxShadow: "0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06)",
@@ -105,6 +105,7 @@ export default function Tab1() {
         <SearchBar onSearch={setSearchValue} value={searchValue} />
         <>
           <Grid>
+          <Grid container spacing={2} alignItems="stretch">
             {myPathRutgersData &&
               myPathRutgersData
                 // .filter(filterNames)
@@ -112,6 +113,7 @@ export default function Tab1() {
                 .map((i, index) => {
                   return (
                     <Grid item xs={12} sm={4} key={index} className={classes.appCard}>
+                  
                       <Card className={classes.cardImage}>
                         <CardActionArea>
                           <Typography
@@ -145,6 +147,7 @@ export default function Tab1() {
                     </Grid>
                   );
                 })}
+                </Grid>
           </Grid>
           <div>
             <Pagination
