@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   RUhorizontal: {
-    width: "50vw",
-    padding: "8px",
+    maxWidth: "35vw",
+    padding: "10px",
   },
   menuIcon: {
     marginLeft: "20px",
