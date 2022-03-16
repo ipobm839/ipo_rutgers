@@ -16,7 +16,7 @@ import {
   IconButton,
   Grid,
 } from "@material-ui/core";
-
+import Divider from "@mui/material/Divider";
 import { Close } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -31,6 +31,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     textAlign: "center",
     fontWeight: 600,
+  },
+  pageTitle: {
+    fontSize: "20px",
+    fontWeight: 500,
+    margin: "20px",
   },
   cardImage: {
     height: "300px",
@@ -102,6 +107,8 @@ export default function Tab1() {
     <div>
       <div className={classes.root}>
         <Navbar />
+        <div className={classes.pageTitle}>myPath Tools</div>
+        <Divider />
         <SearchBar onSearch={setSearchValue} value={searchValue} />
         <>
           <Grid>
