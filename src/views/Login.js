@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  appCard: {
+    display: "inline-block",
+  },
   title: {
     flexGrow: 1,
     textAlign: "center",
@@ -28,9 +31,6 @@ const useStyles = makeStyles((theme) => ({
     left: "0px",
     color: "white",
     fontSize: "4vw",
-  },
-  card: {
-    display: "inline",
   },
   cardInfo: {
     textAlign: "center",
@@ -62,7 +62,7 @@ export default function Tab1() {
         <HomeNavbar position="static" />
         <>
           <div className={classes.root}>
-            <Grid container spacing={3}>
+            <Grid container spacing={2} alignItems="stretch">
               <Grid item xs={12}>
                 <Typography className={classes.paperTitle}>
                   Welcome to the IP&O App
@@ -73,7 +73,7 @@ export default function Tab1() {
                   alt="superHeroImage"
                 />
               </Grid>
-              <Grid item xs={6} className={classes.card}>
+              <Grid item xs={12} sm={4} className={classes.appCard}>
                 <Card className={classes.cardInfo}>
                   <CardActionArea>
                     <CardContent className={classes.cardContent}>
@@ -88,22 +88,18 @@ export default function Tab1() {
                         A division bringing together planning and
                         transportation, facilities operations and construction,
                         public safety and emergency management, and the majority
-                        of the university's auxiliary enterprises. Institutional
-                        Planning and Operations was developed to create
-                        university-wide efficiencies in service delivery and
-                        optimal effectiveness in resource utilization,
-                        benefiting the university community.
+                        of the university's auxiliary enterprises.
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                 </Card>
               </Grid>
-              <Grid item xs={6} className={classes.card}>
+              <Grid item xs={12} sm={4} className={classes.appCard}>
                 <Card className={classes.cardInfo}>
                   <CardActionArea>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
-                        About IP&O
+                        IP&O News
                       </Typography>
                       <Typography
                         variant="body2"
@@ -113,11 +109,28 @@ export default function Tab1() {
                         A division bringing together planning and
                         transportation, facilities operations and construction,
                         public safety and emergency management, and the majority
-                        of the university's auxiliary enterprises. Institutional
-                        Planning and Operations was developed to create
-                        university-wide efficiencies in service delivery and
-                        optimal effectiveness in resource utilization,
-                        benefiting the university community.
+                        of the university's auxiliary enterprises.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item xs={12} sm={4} className={classes.appCard}>
+                <Card className={classes.cardInfo}>
+                  <CardActionArea>
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Contact IP&O
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        A division bringing together planning and
+                        transportation, facilities operations and construction,
+                        public safety and emergency management, and the majority
+                        of the university's auxiliary enterprises.
                       </Typography>
                     </CardContent>
                   </CardActionArea>

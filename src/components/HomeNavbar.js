@@ -13,9 +13,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "35vw",
     padding: "10px",
   },
-  loginBtn: {
-    float: "right",
-  },
 }));
 
 export default function HomeNavbar() {
@@ -35,8 +32,7 @@ export default function HomeNavbar() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
-            className={classes.loginBtn}
+            sx={{ marginLeft: "auto" }} 
           >
             Login
           </Button>

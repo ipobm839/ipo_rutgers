@@ -3,27 +3,23 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
-import BookmarksIcon from '@mui/icons-material/Bookmarks';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
+import BookmarksIcon from "@mui/icons-material/Bookmarks";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
-import {
-  makeStyles,
-} from "@material-ui/core";
-
+import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   indicator: {
-    color: 'red',
+    color: "red",
   },
 }));
 
 export default function NavTabs() {
-
   const [value, setValue] = React.useState(0);
   const ref = React.useRef(null);
   const classes = useStyles();
@@ -39,7 +35,7 @@ export default function NavTabs() {
           showLabels
           value={value}
           classes={{
-            indicator: classes.indicator
+            indicator: classes.indicator,
           }}
           onChange={(event, newValue) => {
             setValue(newValue);
