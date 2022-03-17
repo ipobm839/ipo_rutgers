@@ -1,6 +1,6 @@
 import React from "react";
 import { Login, Tab1, Tab2, Tab3, NotFoundPage } from "./views/";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
