@@ -129,7 +129,8 @@ export default function Tab3() {
                           <img
                             alt="ipoImage"
                             key={index}
-                            src={require(resourcesData[i.image])}
+        
+                            className={classes.thumbnail}
                           />
                           <CardContent>
                             <List>
