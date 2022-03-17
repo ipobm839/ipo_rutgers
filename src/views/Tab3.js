@@ -126,10 +126,6 @@ export default function Tab3() {
                           >
                             {i.title}
                           </Typography>
-                          <img
-                            alt="ipoImage"
-                            className={classes.thumbnail}
-                          />
                           <CardContent>
                             <List>
                               <ListItem key={i.desc}>
