@@ -128,8 +128,6 @@ export default function Tab3() {
                           </Typography>
                           <img
                             alt="ipoImage"
-                            key={index}
-        
                             className={classes.thumbnail}
                           />
                           <CardContent>
