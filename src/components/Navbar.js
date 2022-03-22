@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   RUhorizontal: {
     maxWidth: "35vw",
+    minWidth: "300px",
     padding: "10px",
   },
   menuIcon: {
@@ -58,18 +59,20 @@ export default function Drawer() {
           >
             <MenuIcon className={classes.menuIcon} />
           </IconButton>
-          <img
-            src={RUhorizontal}
-            className={classes.RUhorizontal}
-            alt="RUhorizontal"
-          />
+          <a href="/">
+            <img
+              src={RUhorizontal}
+              className={classes.RUhorizontal}
+              alt="RUhorizontal"
+            />
+          </a>
         </Toolbar>
       </AppBar>
       <SwipeableDrawer
         anchor="left"
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        onOpen={() => {}}
+        onOpen={() => { }}
       >
         <div className={classes.list}>
           <Box textAlign="center" p={2}>

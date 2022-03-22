@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import RUhorizontal from "../assets/ipo_horizontal.png";
 import React from "react";
 import { AppBar, Toolbar, makeStyles } from "@material-ui/core";
+import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -11,12 +12,14 @@ const useStyles = makeStyles((theme) => ({
   },
   RUhorizontal: {
     maxWidth: "35vw",
+    minWidth: "300px",
     padding: "10px",
   },
 }));
 
 export default function HomeNavbar() {
   const classes = useStyles();
+  const navigate = useNavigate();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -29,6 +32,7 @@ export default function HomeNavbar() {
           />
           <Button
             // onClick={() => setIsOpen(!isOpen)}
+            onClick={()=> navigate("/tab1")}
             edge="start"
             color="inherit"
             aria-label="menu"
